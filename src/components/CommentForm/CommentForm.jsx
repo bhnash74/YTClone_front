@@ -17,7 +17,7 @@ const CommentForm = (props) => {
   }
   const handleSubmit = (event) =>  {
     // store the states in the form data
-    axios.post(`http://localhost:5000/api/comments/${props.commentary._id}`, formValue);
+    axios.post('http://localhost:5000/api/comments/', formValue);
     }
   
   return (
@@ -25,14 +25,14 @@ const CommentForm = (props) => {
       <input
         type="text"
         name="text"
-        placeholder="post Reply"
+        placeholder="Write Something..."
         value={formValue.text}
         onChange={handleChange}
       />
         <button
         type="submit"
       >
-            Post Reply    
+            Post Comment    
         </button>
     </form>
   )

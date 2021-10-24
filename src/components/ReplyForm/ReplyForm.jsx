@@ -1,13 +1,12 @@
 import React, {useState, useEffect}from 'react';
 import axios from 'axios';
-
+import CommentsPanel from '../CommentsPanel/CommentsPanel';
 
 const ReplyForm = (props) => {
   const [replyValue, setReplyValue] = useState({
-    text: '',
-    commentId:  'xFrGuyw1V8s'                  //`${props.commentId}`
+    text: ''
   });
-
+  const commentId = '617220e5c0ee5887d0e6ea29';  //`${props.commentId}` 
   const handleChange = (event) => {
     setReplyValue({
       ...replyValue,
@@ -17,25 +16,25 @@ const ReplyForm = (props) => {
   const handleSubmit = (event) =>  {
     event.preventDefault();
     // store the states in the form data
-    axios.post('http://localhost:5000/api/comments/', replyValue);
+    axios.post(`http://localhost:5000/api/comments/${commentId}`, replyValue);
     }
   
   return (
-    <form onSubmit={handleSubmit}>
-      <p>Login Form</p>
+    <span>
+    <form id="replyForm" onSubmit={handleSubmit} rows="1">
       <input
         type="text"
         name="text"
-        placeholder="post Comment"
-        value={formValue.text}
+        placeholder="Reply"
+        value={replyValue.text}
         onChange={handleChange}
       />
         <button
         type="submit"
-      >
-            Post      
+      >   Reply      
         </button>
     </form>
+    </span>
   )
 }
 

@@ -9,15 +9,20 @@
 #comment_div {
     width:30vw;
     padding: 10px;
+    font-weight: bold;
 }
 #comment_div.svg{
     margin:"20vw"
 } 
 form {
-    margin: 150px;
+    margin: 10px;
 }
 .thumb {
     border:none;
     outline:none;
     background-color: white;
+}
+#reply_text {
+    font-style: italic;
+    text-indent: 30px;
 }

@@ -1,0 +1,6 @@
+#replyForm input[type="text"] {
+    vertical-align: top;     
+}
+#replyForm {
+    max-height: 10px;
+}
