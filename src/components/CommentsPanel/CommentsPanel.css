@@ -6,15 +6,18 @@
 #titlerating {
     height: 30px;
 }
-#commentfeed {
-    margin:20px;
-    height: 100px;
+#comment_div {
+    width:30vw;
     padding: 10px;
 }
-#tup #tdown {
-    height: 30px;
-    align-content:right;
+#comment_div.svg{
+    margin:"20vw"
+} 
+form {
+    margin: 150px;
 }
-#titlerating {
-    height: 30px;
+.thumb {
+    border:none;
+    outline:none;
+    background-color: white;
 }
