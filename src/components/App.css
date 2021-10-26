@@ -39,7 +39,26 @@
 #relatedvideos {
   float: right;
 }
+
+.nav{
+  height: 1000px;
+}
+.space{
+  height: 40px;
+}
+.bg{
+  background-color: rgb(230, 230, 233);
+}
+.vidPadding{
+  padding: 40px;
+}
+.vidTitle{
+  align-content: center;
+  font-family:sans-serif;
+  font-size: 45px;
+}
 .iframe {
   display: block;
   margin:75px;
-}
+
+} 

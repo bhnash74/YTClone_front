@@ -4,20 +4,20 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 function RelatedVideos(props) {
-    //config.get('ApiKey'),
     const [relatives, setRelatives] = useState([]);
     useEffect (() => {
-    const relatedVideo = axios.get('https://www.googleapis.com/youtube/v3/search'
+    const relatedVideos = axios.get('https://www.googleapis.com/youtube/v3/search'
         ,{
         params: {
-            relatedToVideoId: {videoId},                   
+            relatedToVideoId: props.videoId,                   
             type: 'video',
             maxResults: 3,
-            key: {API_key}
+            key: props.apiKey
         }})
         .then ((response) => {
-            setRelatives(response.data.items);
-            
+            const related = (response.data.items);
+            setRelatives(related);
+            console.log(relatives);
         })   
    
     },[]);   

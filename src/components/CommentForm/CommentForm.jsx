@@ -6,7 +6,7 @@ import {commentary} from "../CommentsPanel/CommentsPanel"
 const CommentForm = (props) => {
   const [formValue, setformValue] = useState({
     text: '',
-    videoId:  {videoId}
+    videoId:  props.videoId
   });
   const handleChange = (event) => {
     setformValue({

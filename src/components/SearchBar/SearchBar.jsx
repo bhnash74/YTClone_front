@@ -1,10 +1,23 @@
-import React, {  useContext,useState } from 'react';
+import React, {  useEffect,useState } from 'react';
 import axios from 'axios';
 import './SearchBar.css';
-
 const SearchBar = (props) => {
   const [search, setSearch] = useState('');
-
+  useEffect (() =>{
+    axios.get('https://www.googleapis.com/youtube/v3/search'
+    ,{
+        params: {
+            q:  search,
+            maxResults: 1,
+            key: props.apiKey
+        }
+    },
+)
+.then ((response) => {
+    const videos = response.data.items;
+    const selection=videos[0].id;
+})  
+},[])
   const handleChange = (event) => {
     setSearch({
       ...search,
